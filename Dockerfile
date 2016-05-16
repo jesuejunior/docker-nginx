@@ -17,6 +17,8 @@ RUN apt-key add /nginx_signing.key \
 ADD files/nginx.conf /etc/nginx/nginx.conf
 ADD files/nginx.app.conf /etc/nginx/conf.d/app.conf
 
+VOLUME /opt/nginx
+
 EXPOSE 80 443
 
 CMD service nginx start
